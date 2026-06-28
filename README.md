@@ -189,7 +189,7 @@ olist-ecommerce-analysis/
 ### Page 2 — Delivery & Customer Satisfaction
 *Answers: Why are customers unhappy?*
 
-![Delivery & Satisfaction](dashboard/screenshots/db2_delivery_satisfaction.png)
+![Delivery & Satisfaction](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/fc768d714511fa095df867766e4b4adbc803cbe8/Olist_analytics/Screenshot/delivery_customer_satisfaction.png)
 
 **KPIs:** Avg Review Score · Late Delivery Rate · On Time Delivery Rate · Bad Review Rate · Not Delivered Rate
 
