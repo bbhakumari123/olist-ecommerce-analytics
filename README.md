@@ -1,9 +1,6 @@
 # 🛒 Olist E-Commerce Analytics
 ### End-to-End Data Analysis Portfolio Project | MySQL · Python · Power BI
 
-![Dashboard Preview](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/ce7465c215bbde2b85d08d88e1c7fc1fe874760e/Olist_analytics/Screenshot/Revenue_overview.png)
-
-
 
 ## 🔗 Live Dashboard
 [![Power BI Dashboard](https://img.shields.io/badge/Power%20BI-View%20Live%20Dashboard-F2C811?style=for-the-badge&logo=powerbi)](https://app.powerbi.com/groups/me/reports/c46a591d-5265-4230-8b83-45feecbe50f6/a312b5a821dc05ac6107?experience=power-bi)
@@ -166,7 +163,7 @@ olist-ecommerce-analysis/
 
 ## 🗄️ Database Schema
 
-![Power BI Star Schema](dashboard/screenshots/schema.png)
+![Power BI Star Schema](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/7e64263755d2a8884e629b6759dfa9ab31a4ddd8/Olist_analytics/Screenshot/schema.png)
 
 **Key data engineering decisions:**
 - Geolocation deduplicated from 1,000,163 → 19,015 rows (98.1% reduction) to prevent row multiplication on joins
