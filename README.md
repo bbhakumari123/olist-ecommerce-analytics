@@ -200,7 +200,7 @@ olist-ecommerce-analysis/
 ### Page 3 — Insights & Recommendations
 *Answers: What should the business do next?*
 
-![Insights & Recommendations](dashboard/screenshots/db3_insights_recommendations.png)
+![Insights & Recommendations](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/c3eba0b395357075fa2d11a97af51fb1635803db/Olist_analytics/Screenshot/Insights_Recommendations.png)
 
 **KPIs:** Total Active Sellers · Avg Seller Revenue · Underperforming Sellers · 2017→2018 Revenue Growth
 
