@@ -1,7 +1,7 @@
 # 🛒 Olist E-Commerce Analytics
 ### End-to-End Data Analysis Portfolio Project | MySQL · Python · Power BI
 
-![Dashboard Preview](dashboard/screenshots/db1_revenue_overview.png)
+![Dashboard Preview](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/ce7465c215bbde2b85d08d88e1c7fc1fe874760e/Olist_analytics/Screenshot/Revenue_overview.png)
 
 
 
@@ -181,7 +181,7 @@ olist-ecommerce-analysis/
 ### Page 1 — Revenue Overview
 *Answers: How is the business performing?*
 
-![Revenue Overview](dashboard/screenshots/db1_revenue_overview.png)
+![Revenue Overview](https://github.com/bbhakumari123/olist-ecommerce-analytics/blob/ce7465c215bbde2b85d08d88e1c7fc1fe874760e/Olist_analytics/Screenshot/Revenue_overview.png)
 
 **KPIs:** Total Orders · Total Revenue · Avg Order Value · On Time Delivery Rate · Freight % of Revenue
 
