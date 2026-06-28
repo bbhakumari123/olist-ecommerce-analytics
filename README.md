@@ -1,9 +1,9 @@
-# 🛒 Brazilian E-Commerce Analytics
+# 🛒 Olist E-Commerce Analytics
 ### End-to-End Data Analysis Portfolio Project | MySQL · Python · Power BI
 
 ![Dashboard Preview](dashboard/screenshots/db1_revenue_overview.png)
 
-> Built by **Bibha** as a portfolio project to demonstrate end-to-end analyst capability — from raw data engineering and SQL business analysis to statistical hypothesis testing and executive dashboard design.
+
 
 ## 🔗 Live Dashboard
 [![Power BI Dashboard](https://img.shields.io/badge/Power%20BI-View%20Live%20Dashboard-F2C811?style=for-the-badge&logo=powerbi)](https://app.powerbi.com/groups/me/reports/c46a591d-5265-4230-8b83-45feecbe50f6/a312b5a821dc05ac6107?experience=power-bi)
@@ -151,19 +151,15 @@ olist-ecommerce-analysis/
 │   └── phase3_supporting_queries.sql   # Q7–Q12: Trends, cities, distribution
 │
 ├── python/
-│   ├── 01_data_loading_and_setup.ipynb   # Data ingestion and MySQL loading
-│   ├── 02_data_quality_audit.ipynb       # Null audit, deduplication, geolocation fix
+│   ├── 01_data_loading.ipynb   # Data ingestion and MySQL loading
+│   ├── 02_data_quality.ipynb       # Null audit, deduplication, geolocation fix
 │   └── 03_statistical_analysis.ipynb     # Correlation, hypothesis testing, outliers
 │
-├── dashboard/
-│   ├── olist_dashboard.pbix
-│   └── screenshots/
+├── screenshots/
 │       ├── db1_revenue_overview.png
 │       ├── db2_delivery_satisfaction.png
 │       └── db3_insights_recommendations.png
-│
-└── docs/
-    └── business_insights.md
+        └── schema.png
 ```
 
 ---
@@ -234,81 +230,6 @@ Northern states (RR, AP, AM) wait **28+ days** for delivery and carry **24-28% f
 
 ---
 
-## 🛠️ How to Reproduce
-
-### Requirements
-```
-Python 3.8+
-MySQL 8.0
-Power BI Desktop
-Jupyter Notebook
-```
-
-### Python Dependencies
-```bash
-pip install pandas numpy scipy sqlalchemy pymysql jupyter
-```
-
-### Steps
-
-**1. Download the dataset**
-```
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-```
-
-**2. Set up MySQL database**
-```sql
-CREATE DATABASE olist_analysis;
-```
-
-**3. Load data into MySQL**
-```
-Run: python/01_data_loading_and_setup.ipynb
-```
-This loads all 9 CSVs into MySQL with correct table names and row counts.
-
-**4. Run data quality audit**
-```
-Run: python/02_data_quality_audit.ipynb
-```
-This performs null audit, deduplication, geolocation cleaning, and master table build.
-
-**5. Run SQL analysis**
-```
-Open MySQL Workbench
-Run: sql/phase3_core_queries.sql       (Q1–Q6)
-Run: sql/phase3_supporting_queries.sql (Q7–Q12)
-```
-
-**6. Run statistical analysis**
-```
-Run: python/03_statistical_analysis.ipynb
-```
-
-**6. Open dashboard**
-```
-Open: dashboard/olist_dashboard.pbix in Power BI Desktop
-Connect to your local MySQL olist_analysis database
-```
-
----
-
-## ⚠️ Important Notes
-
-**MySQL timeout:** Heavy multi-table joins require timeout settings adjustment. Run this before complex queries:
-```sql
-SET GLOBAL wait_timeout = 28800;
-SET GLOBAL interactive_timeout = 28800;
-SET GLOBAL net_read_timeout = 3600;
-SET GLOBAL net_write_timeout = 3600;
-```
-
-**Master table:** The payments join creates row multiplication (118,310 rows vs 99,441 unique orders). Always use `DISTINCTCOUNT(order_id)` not `COUNT(order_id)` for order metrics. Power BI dashboard uses star schema to avoid this issue.
-
-**Geolocation:** Raw geolocation table has 1M rows with 52 rows per zip prefix on average. Always join using `geolocation_clean` table (19,015 rows) to prevent fan-out errors.
-
----
-
 ## 📋 SQL Query Index
 
 ### Core Queries (phase3_core_queries.sql)
@@ -347,6 +268,18 @@ SET GLOBAL net_write_timeout = 3600;
 
 ---
 
-*Dataset: Olist Brazilian E-Commerce (Kaggle) — Real transaction data 2016-2018*
+---
+
+## 👩‍💻 About This Project
+
+I built this project to demonstrate end-to-end data analytics capability — not just Python or just SQL, but the full pipeline a working analyst would actually follow: understanding the data, cleaning it properly, testing assumptions statistically, answering business questions in SQL, and presenting findings in a way a non-technical stakeholder can act on.
+
+Every decision in this project — the statistical test chosen, the geolocation deduplication approach, the star schema over a flat master table in Power BI, the TREATAS DAX for indirect relationships — was made deliberately. The database schema and SQL query index above document the reasoning.
+
+This project reflects the kind of work I want to do professionally: structured, rigorous, and always connected back to a question worth answering.
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/bibha-kumari-7539ab247/)
+
+Dataset: [Kaggle — Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 *🔗 [View Live Dashboard](https://app.powerbi.com/groups/me/reports/c46a591d-5265-4230-8b83-45feecbe50f6/a312b5a821dc05ac6107?experience=power-bi)*
