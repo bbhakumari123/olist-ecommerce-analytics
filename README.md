@@ -1,5 +1,5 @@
 # 🛒 Olist E-Commerce Analytics
-### End-to-End Data Analysis Portfolio Project | MySQL · Python · Power BI
+### End-to-End Data Analysis  Project | MySQL · Python · Power BI
 
 
 ## 🔗 Live Dashboard
